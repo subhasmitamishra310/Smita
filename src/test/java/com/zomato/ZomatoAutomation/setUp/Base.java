@@ -7,8 +7,7 @@ import org.testng.annotations.BeforeClass;
 public class Base {
 
     @BeforeClass
-    public void initiateRestAssured()
-    {
+    public void initiateRestAssured() {
         RestAssured.baseURI = "https://developers.zomato.com";
     }
 

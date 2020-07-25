@@ -9,9 +9,17 @@ import java.util.Map;
 
 public class RestaurantService {
     RestUtils restUtils = new RestUtils();
-    public Response getSearchRestaurants(Map<String,String> queryParams) throws Exception
-    {
-        return  restUtils.get(RestaurantsEndPoints.GET_SEARCH,queryParams);
+
+    public Response getSearchRestaurants(Map<String, String> queryParams) throws Exception {
+        return restUtils.get(RestaurantsEndPoints.GET_SEARCH, queryParams);
+    }
+
+    public Response getReviewOfRestaurants(Map<String, String> queryParams) throws Exception {
+        return restUtils.get(RestaurantsEndPoints.GET_REVIEW, queryParams);
+    }
+
+    public Response getDailyMenu(Map<String, String> queryParams) throws Exception {
+        return restUtils.get(RestaurantsEndPoints.GET_DAILY_MENU, queryParams);
     }
 
 }
